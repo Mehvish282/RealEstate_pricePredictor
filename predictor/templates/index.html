@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstatePredict - AI-Powered Real Estate Predictions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/main.js' %}"></script>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>EstatePredict</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#listings" class="nav-link">Listings</a></li>
+                <li><a href="#predict" class="nav-link">Predict</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Find Your Perfect Home with AI-Powered Predictions</h1>
+                <p class="hero-subtitle">Get accurate property valuations using advanced machine learning algorithms. Make informed decisions with data-driven insights.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('predict')">Get Price Estimate</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('listings')">View Listings</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80" alt="Modern House">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section id="listings" class="listings">
+        <div class="container">
+            <h2 class="section-title">Featured Properties</h2>
+            <p class="section-subtitle">Discover premium properties with verified pricing</p>
+            
+            <div class="listings-grid">
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Modern Villa">
+                        <div class="listing-badge">Premium</div>
+                    </div>
+                    <div class="listing-content">
+                        <h3 class="listing-title">Modern Villa in Downtown</h3>
+                        <p class="listing-price">$850,000</p>
+                        <p class="listing-description">Stunning 4-bedroom villa with contemporary design, located in the heart of downtown with excellent MRT connectivity.</p>
+                        <div class="listing-features">
+                            <span>4 Beds</span>
+                            <span>3 Baths</span>
+                            <span>2,500 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luxury Apartment">
+                        <div class="listing-badge">New</div>
+                    </div>
+                    <div class="listing-content">
+                        <h3 class="listing-title">Luxury Apartment Complex</h3>
+                        <p class="listing-price">$645,000</p>
+                        <p class="listing-description">Elegant 3-bedroom apartment with panoramic city views, premium amenities, and walking distance to shopping centers.</p>
+                        <div class="listing-features">
+                            <span>3 Beds</span>
+                            <span>2 Baths</span>
+                            <span>1,800 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Suburban Home">
+                        <div class="listing-badge">Featured</div>
+                    </div>
+                    <div class="listing-content">
+                        <h3 class="listing-title">Suburban Family Home</h3>
+                        <p class="listing-price">$475,000</p>
+                        <p class="listing-description">Spacious family home in quiet suburban neighborhood with large garden, perfect for families seeking tranquility.</p>
+                        <div class="listing-features">
+                            <span>5 Beds</span>
+                            <span>3 Baths</span>
+                            <span>3,200 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Penthouse">
+                        <div class="listing-badge">Luxury</div>
+                    </div>
+                    <div class="listing-content">
+                        <h3 class="listing-title">Executive Penthouse</h3>
+                        <p class="listing-price">$1,250,000</p>
+                        <p class="listing-description">Exclusive penthouse with breathtaking skyline views, private terrace, and world-class amenities in prime location.</p>
+                        <div class="listing-features">
+                            <span>4 Beds</span>
+                            <span>4 Baths</span>
+                            <span>4,000 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Townhouse">
+                        <div class="listing-badge">Hot</div>
+                    </div>
+                    <div class="listing-content">
+                        <h3 class="listing-title">Contemporary Townhouse</h3>
+                        <p class="listing-price">$725,000</p>
+                        <p class="listing-description">Modern townhouse with sleek design, private parking, and excellent connectivity to business districts.</p>
+                        <div class="listing-features">
+                            <span>3 Beds</span>
+                            <span>2.5 Baths</span>
+                            <span>2,200 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Condo">
+                        <div class="listing-badge">Value</div>
+                    </div>
+                    <div class="listing-content">
+                        <h3 class="listing-title">Urban Condominium</h3>
+                        <p class="listing-price">$380,000</p>
+                        <p class="listing-description">Affordable urban condo with modern amenities, gym, swimming pool, and close proximity to public transportation.</p>
+                        <div class="listing-features">
+                            <span>2 Beds</span>
+                            <span>2 Baths</span>
+                            <span>1,200 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Prediction Section -->
+    <section id="predict" class="prediction">
+        <div class="container">
+            <h2 class="section-title">Get AI-Powered Price Estimate</h2>
+            <p class="section-subtitle">Enter property details to get an accurate price prediction using machine learning</p>
+            
+            <div class="prediction-container">
+                <form id="predictionForm" class="prediction-form" method="POST" action="{% url 'predict_price' %}">
+    {% csrf_token %}
+                    <div class="form-grid">
+                        <div class="form-group">
+  <label for="propertyArea">Property Area (in m²)</label>
+  <input type="number" name="propertyArea" id="propertyArea" step="0.01" required>
+</div>
+
+                        <div class="form-group">
+                            <label for="houseAge">House Age (years)</label>
+                            <input type="number" id="houseAge" name="houseAge" required min="0" max="100">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="distanceToMRT">Distance to MRT (km)</label>
+                            <input type="number" id="distanceToMRT" name="distanceToMRT" required min="0" max="50" step="0.1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="numberOfStores">Number of Nearby Stores</label>
+                            <input type="number" id="numberOfStores" name="numberOfStores" required min="0" max="20">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="latitude">Latitude</label>
+                            <input type="number" id="latitude" name="latitude" required step="0.000001" min="-90" max="90">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="longitude">Longitude</label>
+                            <input type="number" id="longitude" name="longitude" required step="0.000001" min="-180" max="180">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="transactionYear">Transaction Year</label>
+                            <input type="number" id="transactionYear" name="transactionYear" required min="2000" max="2024">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="transactionMonth">Transaction Month</label>
+                            <select id="transactionMonth" name="transactionMonth" required>
+                                <option value="">Select Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span class="btn-text">Get Price Prediction</span>
+                        <span class="btn-loading" style="display: none;">Calculating...</span>
+                    </button>
+                </form>
+                <div id="predictionResult" class="prediction-result" style="display: none;">
+    <div class="result-content">
+        <h3>Prediction Summary</h3>
+        <p>Price per m²: <strong>$<span id="pricePerUnit">0</span></strong></p>
+        <p>Total Estimated Price: <strong>$<span id="predictedPrice">0</span></strong></p>
+        <p class="result-disclaimer">This prediction is based on machine learning algorithms and historical data. Actual prices may vary.</p>
+    </div>
+</div>
+
+                
+                <!-- <div id="predictionResult" class="prediction-result" style="display: none;">
+                    <div class="result-content">
+                        <h3>Predicted Price</h3>
+                        <div class="predicted-price">$<span id="predictedPrice">0</span></div>
+                        <p class="result-disclaimer">This prediction is based on machine learning algorithms and historical data. Actual prices may vary based on market conditions and property specifics.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About EstatePredict</h2>
+            <p class="section-subtitle">Advanced AI technology meets real estate expertise</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>EstatePredict leverages cutting-edge machine learning algorithms to provide accurate property valuations. Our AI models analyze thousands of data points including location, property features, market trends, and historical transactions to deliver precise price predictions.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <h4>🤖 AI-Powered Predictions</h4>
+                            <p>Advanced machine learning models trained on extensive real estate data</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📊 Real-Time Market Analysis</h4>
+                            <p>Up-to-date market insights and pricing trends</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🎯 Accurate Valuations</h4>
+                            <p>Precise property valuations with confidence intervals</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🌟 User-Friendly Interface</h4>
+                            <p>Simple and intuitive platform for all users</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EstatePredict</h3>
+                    <p>AI-powered real estate predictions for smarter property decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#listings">Listings</a></li>
+                        <li><a href="#predict">Predict</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@estatepredict.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EstatePredict. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+document.getElementById("predictionForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop form from reloading the page
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/predict/", {
+        method: "POST",
+        headers: {
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.estimated_total_price) {
+            // Fill the results dynamically
+            document.getElementById("pricePerUnit").textContent = formatNumber(data.price_per_unit);
+            document.getElementById("predictedPrice").textContent = formatNumber(data.estimated_total_price);
+            document.getElementById("predictionResult").style.display = "block";
+        } else if (data.error) {
+            alert("Error: " + data.error);
+        }
+    })
+    .catch(err => {
+        alert("Something went wrong: " + err);
+    });
+});
+function formatNumber(value) {
+    return Number(value).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+// CSRF helper
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + "=")) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  }
+</script>
+
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
